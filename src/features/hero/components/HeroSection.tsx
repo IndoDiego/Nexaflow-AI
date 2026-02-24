@@ -87,19 +87,19 @@ export function HeroSection() {
           animate="visible"
           className="mx-auto mt-20 max-w-3xl"
         >
-          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-4">
+          <div className="flex items-center justify-center gap-8 sm:gap-12 lg:gap-16">
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.key}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 + i * 0.1 }}
-                className="flex flex-col items-center gap-1 bg-card px-4 py-6"
+                transition={{ duration: 0.4, delay: 0.8 + i * 0.08 }}
+                className="flex flex-col items-center"
               >
-                <span className="text-3xl font-extrabold gradient-text sm:text-4xl">
+                <span className="text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
                   {stat.value}
                 </span>
-                <span className="text-xs font-medium text-foreground-muted">
+                <span className="mt-1 text-[11px] font-medium uppercase tracking-widest text-foreground-muted sm:text-xs">
                   {t(`stats.${stat.key}`)}
                 </span>
               </motion.div>
