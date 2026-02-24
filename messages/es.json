@@ -1,0 +1,246 @@
+{
+  "Metadata": {
+    "title": "NexaFlow AI | Automatizacion Inteligente para tu Negocio",
+    "description": "Transformamos tu negocio con inteligencia artificial. Automatizacion de procesos, chatbots, CRM inteligente y mas. Multiplica x10 tus operaciones.",
+    "keywords": "automatizacion IA, inteligencia artificial empresas, chatbot IA, CRM inteligente, auditoria IA"
+  },
+  "Navigation": {
+    "services": "Servicios",
+    "audit": "Auditoria IA",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "blog": "Blog",
+    "cta": "Auditoria Gratis",
+    "languageSwitch": "EN"
+  },
+  "Hero": {
+    "headline": "Potencia tu negocio",
+    "headlineHighlight": "con Inteligencia Artificial",
+    "subheadline": "Automatizamos procesos, implementamos herramientas de IA y multiplicamos tus resultados x10. Tu equipo de tecnologia AI a un click.",
+    "ctaPrimary": "Auditoria IA Gratis",
+    "ctaSecondary": "Ver Servicios",
+    "stats": {
+      "automations": "Automatizaciones",
+      "hoursSaved": "Horas Ahorradas",
+      "clients": "Clientes Potenciados",
+      "satisfaction": "Satisfaccion"
+    }
+  },
+  "Services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones de IA diseñadas para cada area de tu negocio",
+    "searchPlaceholder": "Buscar servicios...",
+    "viewAll": "Ver todos los servicios",
+    "learnMore": "Saber mas",
+    "categories": {
+      "all": "Todos",
+      "chatbots": "Chatbots",
+      "automation": "Automatizacion",
+      "crm": "CRM",
+      "marketing": "Marketing",
+      "analytics": "Analitica",
+      "custom": "Custom AI",
+      "training": "Capacitacion"
+    },
+    "items": {
+      "chatbots": {
+        "title": "Chatbots & Asistentes Virtuales",
+        "short": "Atencion al cliente 24/7 con IA conversacional que resuelve, no solo responde.",
+        "description": "Implementamos chatbots inteligentes que entienden el contexto de tu negocio, resuelven consultas complejas y escalan cuando es necesario. Integracion con WhatsApp, web, Instagram y mas."
+      },
+      "automation": {
+        "title": "Automatizacion de Procesos",
+        "short": "Elimina tareas repetitivas y conecta todas tus herramientas en flujos inteligentes.",
+        "description": "Diseñamos y construimos workflows automatizados que conectan tus aplicaciones, eliminan tareas manuales y reducen errores. Desde onboarding de clientes hasta reportes automaticos."
+      },
+      "crm": {
+        "title": "CRM Potenciado con IA",
+        "short": "Tu CRM trabajando para ti: scoring automatico, seguimiento inteligente y predicciones.",
+        "description": "Configuramos y optimizamos tu CRM con capas de inteligencia artificial: lead scoring predictivo, automatizacion de seguimiento, analisis de sentimiento y recomendaciones de accion."
+      },
+      "marketing": {
+        "title": "Marketing Automation con IA",
+        "short": "Campañas que se optimizan solas: email, redes sociales y contenido potenciado por IA.",
+        "description": "Implementamos sistemas de marketing automatizado con IA para email marketing personalizado, gestion de redes sociales, generacion de contenido y segmentacion avanzada de audiencias."
+      },
+      "analytics": {
+        "title": "Analitica & Business Intelligence",
+        "short": "Datos convertidos en decisiones: dashboards inteligentes y predicciones accionables.",
+        "description": "Construimos dashboards personalizados y sistemas de business intelligence que transforman tus datos en insights accionables con predicciones basadas en IA."
+      },
+      "custom": {
+        "title": "Soluciones AI Personalizadas",
+        "short": "IA a medida para desafios unicos: modelos custom, RAG, fine-tuning y mas.",
+        "description": "Desarrollamos soluciones de IA completamente personalizadas: sistemas RAG con tu documentacion, modelos fine-tuned para tu industria, APIs de IA y asistentes especializados."
+      },
+      "audit": {
+        "title": "Auditoria & Assessment IA",
+        "short": "Descubre exactamente donde la IA puede transformar tu negocio con una auditoria gratuita.",
+        "description": "Analizamos tu negocio de extremo a extremo para identificar oportunidades de implementacion de IA con estimacion de ROI, hoja de ruta priorizada y plan de implementacion."
+      },
+      "training": {
+        "title": "Capacitacion & Workshops",
+        "short": "Empodera a tu equipo para aprovechar la IA en su dia a dia.",
+        "description": "Workshops personalizados y programas de capacitacion para que tu equipo domine las herramientas de IA relevantes para su rol, desde ChatGPT hasta herramientas especificas de tu industria."
+      }
+    }
+  },
+  "Audit": {
+    "title": "Auditoria IA Gratuita",
+    "subtitle": "Descubre como la inteligencia artificial puede transformar tu negocio",
+    "description": "En menos de 48 horas recibiras un informe personalizado con oportunidades concretas de mejora, estimacion de ROI y un plan de accion priorizado.",
+    "ctaInline": "Solicitar Auditoria",
+    "steps": {
+      "step1": "Informacion del Negocio",
+      "step2": "Tecnologia Actual",
+      "step3": "Intereses en IA",
+      "step4": "Datos de Contacto"
+    },
+    "benefits": {
+      "title": "Lo que recibiras",
+      "items": {
+        "assessment": "Evaluacion completa de oportunidades IA",
+        "roi": "Estimacion de ROI para cada oportunidad",
+        "roadmap": "Hoja de ruta priorizada de implementacion",
+        "meeting": "Reunion de presentacion de resultados"
+      }
+    },
+    "form": {
+      "companyName": "Nombre de la empresa",
+      "website": "Sitio web",
+      "industry": "Industria",
+      "companySize": "Tamaño de la empresa",
+      "currentTools": "Herramientas actuales",
+      "challenge": "Mayor desafio operativo",
+      "challengePlaceholder": "Describe brevemente tu mayor desafio...",
+      "repetitiveHours": "Horas semanales en tareas repetitivas",
+      "interestedServices": "Servicios de interes",
+      "budget": "Rango de presupuesto",
+      "timeline": "Plazo",
+      "fullName": "Nombre completo",
+      "email": "Correo electronico",
+      "phone": "Telefono (opcional)",
+      "language": "Idioma preferido",
+      "referral": "Como nos encontraste",
+      "submit": "Enviar Solicitud",
+      "next": "Siguiente",
+      "previous": "Anterior",
+      "success": "¡Solicitud enviada! Te contactaremos en menos de 48 horas."
+    },
+    "industries": {
+      "ecommerce": "E-commerce",
+      "tourism": "Turismo",
+      "finance": "Finanzas",
+      "healthcare": "Salud",
+      "education": "Educacion",
+      "saas": "SaaS",
+      "retail": "Retail",
+      "realestate": "Inmobiliaria",
+      "other": "Otro"
+    },
+    "companySizes": {
+      "micro": "1-10 empleados",
+      "small": "11-50 empleados",
+      "medium": "51-200 empleados",
+      "large": "200+ empleados"
+    },
+    "budgets": {
+      "low": "Menos de $1,000",
+      "mid": "$1,000 - $5,000",
+      "high": "$5,000 - $15,000",
+      "enterprise": "$15,000+",
+      "unsure": "No estoy seguro"
+    },
+    "timelines": {
+      "asap": "Lo antes posible",
+      "short": "1-3 meses",
+      "medium": "3-6 meses",
+      "exploring": "Solo explorando"
+    }
+  },
+  "HowItWorks": {
+    "title": "Como Trabajamos",
+    "subtitle": "Un proceso simple para resultados extraordinarios",
+    "steps": {
+      "discovery": {
+        "title": "Discovery",
+        "description": "Analizamos tu negocio, procesos y objetivos para identificar oportunidades."
+      },
+      "audit": {
+        "title": "Auditoria",
+        "description": "Evaluamos cada area y cuantificamos el impacto potencial de la IA."
+      },
+      "implementation": {
+        "title": "Implementacion",
+        "description": "Construimos e integramos las soluciones priorizadas por impacto y viabilidad."
+      },
+      "scale": {
+        "title": "Escalar",
+        "description": "Optimizamos, medimos resultados y escalamos lo que funciona."
+      }
+    }
+  },
+  "About": {
+    "title": "Sobre NexaFlow AI",
+    "subtitle": "Tu socio estrategico en transformacion digital con IA",
+    "mission": "Nuestra mision es democratizar el acceso a la inteligencia artificial para que cualquier negocio pueda multiplicar sus resultados.",
+    "values": {
+      "innovation": {
+        "title": "Innovacion",
+        "description": "Siempre a la vanguardia de las ultimas herramientas y tecnicas de IA."
+      },
+      "results": {
+        "title": "Resultados",
+        "description": "Cada implementacion se mide por su impacto real en tu negocio."
+      },
+      "transparency": {
+        "title": "Transparencia",
+        "description": "Sin humo, sin jerga innecesaria. Explicamos todo de forma clara."
+      },
+      "partnership": {
+        "title": "Partnership",
+        "description": "No somos proveedores, somos tu equipo externo de tecnologia AI."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Hablemos",
+    "subtitle": "Estamos listos para potenciar tu negocio",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electronico",
+      "company": "Empresa",
+      "service": "Servicio de interes",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuentanos sobre tu proyecto o necesidad...",
+      "submit": "Enviar Mensaje",
+      "success": "¡Mensaje enviado! Te responderemos pronto."
+    },
+    "info": {
+      "email": "hello@nexaflow.ai",
+      "schedule": "Agendar una llamada",
+      "response": "Respondemos en menos de 24 horas"
+    }
+  },
+  "CTA": {
+    "title": "¿Listo para multiplicar tus resultados x10?",
+    "subtitle": "Comienza con una auditoria gratuita y descubre el potencial de la IA en tu negocio.",
+    "button": "Comenzar Ahora"
+  },
+  "Footer": {
+    "description": "Transformamos negocios con inteligencia artificial. Automatizacion, chatbots, CRM y soluciones AI personalizadas.",
+    "services": "Servicios",
+    "company": "Empresa",
+    "legal": "Legal",
+    "privacy": "Politica de Privacidad",
+    "terms": "Terminos de Servicio",
+    "rights": "Todos los derechos reservados."
+  },
+  "Common": {
+    "learnMore": "Saber mas",
+    "getStarted": "Comenzar",
+    "bookCall": "Agendar Llamada",
+    "backToHome": "Volver al inicio",
+    "loading": "Cargando..."
+  }
+}

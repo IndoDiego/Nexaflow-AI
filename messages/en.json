@@ -1,0 +1,246 @@
+{
+  "Metadata": {
+    "title": "NexaFlow AI | Intelligent Automation for Your Business",
+    "description": "We transform your business with artificial intelligence. Process automation, chatbots, smart CRM and more. 10x your operations.",
+    "keywords": "AI automation, artificial intelligence business, AI chatbot, smart CRM, AI audit"
+  },
+  "Navigation": {
+    "services": "Services",
+    "audit": "AI Audit",
+    "about": "About",
+    "contact": "Contact",
+    "blog": "Blog",
+    "cta": "Free Audit",
+    "languageSwitch": "ES"
+  },
+  "Hero": {
+    "headline": "Supercharge your business",
+    "headlineHighlight": "with Artificial Intelligence",
+    "subheadline": "We automate processes, implement AI tools and 10x your results. Your AI technology team, one click away.",
+    "ctaPrimary": "Free AI Audit",
+    "ctaSecondary": "View Services",
+    "stats": {
+      "automations": "Automations",
+      "hoursSaved": "Hours Saved",
+      "clients": "Clients Powered",
+      "satisfaction": "Satisfaction"
+    }
+  },
+  "Services": {
+    "title": "Our Services",
+    "subtitle": "AI solutions designed for every area of your business",
+    "searchPlaceholder": "Search services...",
+    "viewAll": "View all services",
+    "learnMore": "Learn more",
+    "categories": {
+      "all": "All",
+      "chatbots": "Chatbots",
+      "automation": "Automation",
+      "crm": "CRM",
+      "marketing": "Marketing",
+      "analytics": "Analytics",
+      "custom": "Custom AI",
+      "training": "Training"
+    },
+    "items": {
+      "chatbots": {
+        "title": "Chatbots & Virtual Assistants",
+        "short": "24/7 customer service with conversational AI that resolves, not just responds.",
+        "description": "We implement intelligent chatbots that understand your business context, resolve complex queries and escalate when needed. Integration with WhatsApp, web, Instagram and more."
+      },
+      "automation": {
+        "title": "Business Process Automation",
+        "short": "Eliminate repetitive tasks and connect all your tools in intelligent workflows.",
+        "description": "We design and build automated workflows that connect your applications, eliminate manual tasks and reduce errors. From client onboarding to automated reports."
+      },
+      "crm": {
+        "title": "AI-Powered CRM",
+        "short": "Your CRM working for you: automatic scoring, smart follow-up and predictions.",
+        "description": "We configure and optimize your CRM with AI layers: predictive lead scoring, follow-up automation, sentiment analysis and action recommendations."
+      },
+      "marketing": {
+        "title": "AI Marketing Automation",
+        "short": "Self-optimizing campaigns: email, social media and content powered by AI.",
+        "description": "We implement AI-powered marketing automation for personalized email marketing, social media management, content generation and advanced audience segmentation."
+      },
+      "analytics": {
+        "title": "Analytics & Business Intelligence",
+        "short": "Data turned into decisions: intelligent dashboards and actionable predictions.",
+        "description": "We build custom dashboards and business intelligence systems that transform your data into actionable insights with AI-based predictions."
+      },
+      "custom": {
+        "title": "Custom AI Solutions",
+        "short": "Tailored AI for unique challenges: custom models, RAG, fine-tuning and more.",
+        "description": "We develop fully customized AI solutions: RAG systems with your documentation, fine-tuned models for your industry, AI APIs and specialized assistants."
+      },
+      "audit": {
+        "title": "AI Audit & Assessment",
+        "short": "Discover exactly where AI can transform your business with a free audit.",
+        "description": "We analyze your business end-to-end to identify AI implementation opportunities with ROI estimation, prioritized roadmap and implementation plan."
+      },
+      "training": {
+        "title": "Training & Workshops",
+        "short": "Empower your team to leverage AI in their daily work.",
+        "description": "Customized workshops and training programs so your team masters AI tools relevant to their role, from ChatGPT to industry-specific tools."
+      }
+    }
+  },
+  "Audit": {
+    "title": "Free AI Audit",
+    "subtitle": "Discover how artificial intelligence can transform your business",
+    "description": "In less than 48 hours you'll receive a personalized report with concrete improvement opportunities, ROI estimation and a prioritized action plan.",
+    "ctaInline": "Request Audit",
+    "steps": {
+      "step1": "Business Info",
+      "step2": "Current Technology",
+      "step3": "AI Interests",
+      "step4": "Contact Details"
+    },
+    "benefits": {
+      "title": "What you'll receive",
+      "items": {
+        "assessment": "Complete AI opportunities assessment",
+        "roi": "ROI estimation for each opportunity",
+        "roadmap": "Prioritized implementation roadmap",
+        "meeting": "Results presentation meeting"
+      }
+    },
+    "form": {
+      "companyName": "Company name",
+      "website": "Website",
+      "industry": "Industry",
+      "companySize": "Company size",
+      "currentTools": "Current tools",
+      "challenge": "Biggest operational challenge",
+      "challengePlaceholder": "Briefly describe your biggest challenge...",
+      "repetitiveHours": "Weekly hours on repetitive tasks",
+      "interestedServices": "Services of interest",
+      "budget": "Budget range",
+      "timeline": "Timeline",
+      "fullName": "Full name",
+      "email": "Email address",
+      "phone": "Phone (optional)",
+      "language": "Preferred language",
+      "referral": "How did you find us",
+      "submit": "Submit Request",
+      "next": "Next",
+      "previous": "Previous",
+      "success": "Request sent! We'll contact you within 48 hours."
+    },
+    "industries": {
+      "ecommerce": "E-commerce",
+      "tourism": "Tourism",
+      "finance": "Finance",
+      "healthcare": "Healthcare",
+      "education": "Education",
+      "saas": "SaaS",
+      "retail": "Retail",
+      "realestate": "Real Estate",
+      "other": "Other"
+    },
+    "companySizes": {
+      "micro": "1-10 employees",
+      "small": "11-50 employees",
+      "medium": "51-200 employees",
+      "large": "200+ employees"
+    },
+    "budgets": {
+      "low": "Less than $1,000",
+      "mid": "$1,000 - $5,000",
+      "high": "$5,000 - $15,000",
+      "enterprise": "$15,000+",
+      "unsure": "Not sure"
+    },
+    "timelines": {
+      "asap": "As soon as possible",
+      "short": "1-3 months",
+      "medium": "3-6 months",
+      "exploring": "Just exploring"
+    }
+  },
+  "HowItWorks": {
+    "title": "How We Work",
+    "subtitle": "A simple process for extraordinary results",
+    "steps": {
+      "discovery": {
+        "title": "Discovery",
+        "description": "We analyze your business, processes and goals to identify opportunities."
+      },
+      "audit": {
+        "title": "Audit",
+        "description": "We evaluate each area and quantify the potential impact of AI."
+      },
+      "implementation": {
+        "title": "Implementation",
+        "description": "We build and integrate solutions prioritized by impact and feasibility."
+      },
+      "scale": {
+        "title": "Scale",
+        "description": "We optimize, measure results and scale what works."
+      }
+    }
+  },
+  "About": {
+    "title": "About NexaFlow AI",
+    "subtitle": "Your strategic partner in digital transformation with AI",
+    "mission": "Our mission is to democratize access to artificial intelligence so any business can multiply its results.",
+    "values": {
+      "innovation": {
+        "title": "Innovation",
+        "description": "Always at the forefront of the latest AI tools and techniques."
+      },
+      "results": {
+        "title": "Results",
+        "description": "Every implementation is measured by its real impact on your business."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "No smoke, no unnecessary jargon. We explain everything clearly."
+      },
+      "partnership": {
+        "title": "Partnership",
+        "description": "We're not vendors, we're your external AI technology team."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Let's Talk",
+    "subtitle": "We're ready to supercharge your business",
+    "form": {
+      "name": "Name",
+      "email": "Email address",
+      "company": "Company",
+      "service": "Service of interest",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project or need...",
+      "submit": "Send Message",
+      "success": "Message sent! We'll get back to you soon."
+    },
+    "info": {
+      "email": "hello@nexaflow.ai",
+      "schedule": "Schedule a call",
+      "response": "We respond within 24 hours"
+    }
+  },
+  "CTA": {
+    "title": "Ready to 10x your results?",
+    "subtitle": "Start with a free audit and discover the potential of AI in your business.",
+    "button": "Get Started"
+  },
+  "Footer": {
+    "description": "We transform businesses with artificial intelligence. Automation, chatbots, CRM and custom AI solutions.",
+    "services": "Services",
+    "company": "Company",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "rights": "All rights reserved."
+  },
+  "Common": {
+    "learnMore": "Learn more",
+    "getStarted": "Get Started",
+    "bookCall": "Book a Call",
+    "backToHome": "Back to home",
+    "loading": "Loading..."
+  }
+}
