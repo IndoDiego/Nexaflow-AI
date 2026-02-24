@@ -77,21 +77,26 @@ export default async function ContactPage({
           </div>
         </div>
 
-        {/* Calendly Section */}
-        <div className="mt-16">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-extrabold text-foreground">
-              {t("info.schedule")}
-            </h2>
+        {/* Schedule a call CTA */}
+        <div className="mt-16 rounded-2xl border border-[var(--color-primary)]/15 bg-[var(--color-primary)]/5 p-8 text-center sm:p-12">
+          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-primary)]/10 text-[var(--color-primary)]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
           </div>
-          <div className="rounded-xl border border-border bg-card overflow-hidden">
-            <div
-              className="calendly-inline-widget"
-              data-url={process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.com/your-nexaflow-url"}
-              style={{ minWidth: "320px", height: "630px" }}
-            />
-            <script src="https://assets.calendly.com/assets/external/widget.js" async />
-          </div>
+          <h2 className="mt-4 text-2xl font-extrabold text-foreground">
+            {t("info.schedule")}
+          </h2>
+          <p className="mx-auto mt-2 max-w-md text-sm text-foreground-secondary">
+            {t("info.response")}
+          </p>
+          <a
+            href={process.env.NEXT_PUBLIC_CALENDLY_URL ?? "mailto:hello@nexaflow.ai?subject=Schedule a call"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[var(--color-primary)] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[var(--color-primary)]/25 transition-all hover:bg-[var(--color-primary-dark)] hover:shadow-xl hover:-translate-y-0.5"
+          >
+            {t("info.schedule")}
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
         </div>
       </Container>
     </Section>
