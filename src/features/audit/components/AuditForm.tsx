@@ -86,27 +86,28 @@ export function AuditForm() {
   return (
     <div className="space-y-8">
       {/* Step indicator */}
-      <div className="flex items-center justify-between">
-        {stepLabels.map((label, i) => (
-          <div key={i} className="flex items-center gap-2">
+      <div className="space-y-3">
+        <div className="flex items-center justify-between">
+          <span className="text-sm font-semibold text-foreground">
+            {stepLabels[step - 1]}
+          </span>
+          <span className="text-xs font-medium text-foreground-muted">
+            {step} / {TOTAL_STEPS}
+          </span>
+        </div>
+        <div className="flex gap-1.5">
+          {stepLabels.map((_, i) => (
             <div
+              key={i}
               className={cn(
-                "flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold",
-                step > i + 1
-                  ? "bg-[var(--color-accent)] text-white"
-                  : step === i + 1
-                    ? "bg-[var(--color-primary)] text-white"
-                    : "bg-background-tertiary text-foreground-muted"
+                "h-1.5 flex-1 rounded-full transition-colors duration-300",
+                i < step
+                  ? "bg-[var(--color-primary)]"
+                  : "bg-border"
               )}
-            >
-              {step > i + 1 ? "✓" : i + 1}
-            </div>
-            <span className="hidden text-sm text-foreground-secondary sm:inline">{label}</span>
-            {i < stepLabels.length - 1 && (
-              <div className="mx-2 hidden h-0.5 w-8 bg-border sm:block lg:w-16" />
-            )}
-          </div>
-        ))}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Step 1 */}
