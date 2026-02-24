@@ -89,7 +89,7 @@ export default async function ContactPage({
             {t("info.response")}
           </p>
           <a
-            href={process.env.NEXT_PUBLIC_CALENDLY_URL ?? "mailto:hello@nexaflow.ai?subject=Schedule a call"}
+            href={process.env.NEXT_PUBLIC_CALENDLY_URL ?? "mailto:indogroup.diego@gmail.com?subject=Schedule a call"}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[var(--color-primary)] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[var(--color-primary)]/25 transition-all hover:bg-[var(--color-primary-dark)] hover:shadow-xl hover:-translate-y-0.5"

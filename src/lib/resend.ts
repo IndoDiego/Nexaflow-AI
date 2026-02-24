@@ -12,5 +12,5 @@ export function getResend(): Resend | null {
 }
 
 // Email sender configuration
-export const EMAIL_FROM = "NexaFlow AI <hello@nexaflow.ai>";
-export const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? "hello@nexaflow.ai";
+export const EMAIL_FROM = "NexaFlow AI <indogroup.diego@gmail.com>";
+export const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? "indogroup.diego@gmail.com";
