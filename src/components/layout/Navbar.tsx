@@ -21,31 +21,31 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg">
+    <header className="sticky top-0 z-50 border-b border-border/50 bg-background/60 backdrop-blur-xl">
       <Container>
-        <nav className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 text-lg font-bold text-foreground">
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--color-primary)] text-white text-sm font-bold">
+        <nav className="flex h-14 items-center justify-between">
+          {/* Logo - terminal style */}
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-[var(--color-primary)] text-white text-xs font-mono font-bold pulse-glow">
               N
             </span>
-            <span>
-              Nexa<span className="text-[var(--color-primary)]">Flow</span>
-              <span className="ml-1 text-xs font-normal text-foreground-muted">AI</span>
+            <span className="font-mono text-sm tracking-tight text-foreground">
+              nexa<span className="text-[var(--color-primary)]">flow</span>
+              <span className="text-foreground-muted">.ai</span>
             </span>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden items-center gap-1 md:flex">
+          <div className="hidden items-center gap-0.5 md:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.key}
                 href={link.href}
                 className={cn(
-                  "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+                  "relative rounded-md px-3 py-1.5 font-mono text-xs tracking-wide transition-all duration-200",
                   pathname === link.href
-                    ? "bg-[var(--color-primary)]/10 text-[var(--color-primary)]"
-                    : "text-foreground-secondary hover:bg-card-hover hover:text-foreground"
+                    ? "text-[var(--color-primary)] bg-[var(--color-primary)]/8"
+                    : "text-foreground-muted hover:text-foreground hover:bg-card-hover"
                 )}
               >
                 {t(link.key)}
@@ -54,23 +54,23 @@ export function Navbar() {
           </div>
 
           {/* Right side */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5">
             <ThemeToggle />
             <LocaleSwitcher />
             <Link
               href="/auditoria-ia"
-              className="hidden rounded-lg bg-[var(--color-primary)] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[var(--color-primary-dark)] md:inline-flex"
+              className="hidden items-center gap-1.5 rounded-md border border-[var(--color-primary)]/50 bg-[var(--color-primary)]/10 px-3 py-1.5 font-mono text-xs text-[var(--color-primary)] transition-all hover:bg-[var(--color-primary)] hover:text-white hover:shadow-[0_0_15px_rgba(37,99,235,0.3)] md:inline-flex"
             >
-              {t("cta")}
+              <span className="text-[var(--color-accent)]">$</span> {t("cta")}
             </Link>
 
             {/* Mobile hamburger */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="flex h-9 w-9 items-center justify-center rounded-lg border border-border md:hidden"
+              className="flex h-8 w-8 items-center justify-center rounded-md border border-border/50 text-foreground-muted hover:text-foreground md:hidden"
               aria-label="Toggle menu"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 {mobileOpen ? (
                   <>
                     <line x1="18" y1="6" x2="6" y2="18" />
@@ -89,29 +89,30 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         {mobileOpen && (
-          <div className="border-t border-border pb-4 md:hidden">
-            <div className="flex flex-col gap-1 pt-2">
+          <div className="border-t border-border/30 pb-4 md:hidden">
+            <div className="flex flex-col gap-0.5 pt-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.key}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
                   className={cn(
-                    "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+                    "rounded-md px-3 py-2 font-mono text-xs tracking-wide transition-colors",
                     pathname === link.href
                       ? "bg-[var(--color-primary)]/10 text-[var(--color-primary)]"
-                      : "text-foreground-secondary hover:bg-card-hover hover:text-foreground"
+                      : "text-foreground-muted hover:bg-card-hover hover:text-foreground"
                   )}
                 >
+                  <span className="text-foreground-muted mr-2">&gt;</span>
                   {t(link.key)}
                 </Link>
               ))}
               <Link
                 href="/auditoria-ia"
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 rounded-lg bg-[var(--color-primary)] px-4 py-2 text-center text-sm font-medium text-white transition-colors hover:bg-[var(--color-primary-dark)]"
+                className="mt-2 rounded-md border border-[var(--color-primary)]/50 bg-[var(--color-primary)]/10 px-4 py-2 text-center font-mono text-xs text-[var(--color-primary)] transition-colors hover:bg-[var(--color-primary)] hover:text-white"
               >
-                {t("cta")}
+                <span className="text-[var(--color-accent)]">$</span> {t("cta")}
               </Link>
             </div>
           </div>

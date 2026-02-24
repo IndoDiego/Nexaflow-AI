@@ -32,31 +32,29 @@ export function ServiceGrid({ featuredOnly = false }: ServiceGridProps) {
       {/* Search & Filter */}
       {!featuredOnly && (
         <div className="mb-8 space-y-4">
-          {/* Search */}
+          {/* Search - terminal style */}
           <div className="relative">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground-muted">
-              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
-            </svg>
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[var(--color-primary)]">$</span>
             <input
               type="text"
               placeholder={t("searchPlaceholder")}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full rounded-lg border border-border bg-card py-2.5 pl-10 pr-4 text-sm text-foreground placeholder:text-foreground-muted focus:border-[var(--color-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]"
+              className="w-full rounded-md border border-border/50 bg-card/50 py-2.5 pl-8 pr-4 font-mono text-xs text-foreground placeholder:text-foreground-muted focus:border-[var(--color-primary)]/50 focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]/30 backdrop-blur-sm"
             />
           </div>
 
-          {/* Category tabs */}
-          <div className="flex flex-wrap gap-2">
+          {/* Category tabs - code style */}
+          <div className="flex flex-wrap gap-1.5">
             {categories.map((cat) => (
               <button
                 key={cat.key}
                 onClick={() => setActiveCategory(cat.key)}
                 className={cn(
-                  "rounded-lg px-3 py-1.5 text-sm font-medium transition-colors",
+                  "rounded-md px-3 py-1.5 font-mono text-xs transition-all duration-200",
                   activeCategory === cat.key
-                    ? "bg-[var(--color-primary)] text-white"
-                    : "bg-background-tertiary text-foreground-secondary hover:bg-border hover:text-foreground"
+                    ? "bg-[var(--color-primary)]/15 text-[var(--color-primary)] border border-[var(--color-primary)]/30 shadow-[0_0_10px_rgba(37,99,235,0.1)]"
+                    : "border border-transparent text-foreground-muted hover:text-foreground hover:bg-card-hover"
                 )}
               >
                 {t(`categories.${cat.translationKey}`)}

@@ -47,10 +47,13 @@ export default async function HomePage({
       <Section>
         <Container>
           <div className="mb-12 text-center">
+            <span className="mb-3 inline-block font-mono text-xs uppercase tracking-widest text-[var(--color-primary)]">
+              // services
+            </span>
             <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
               {t("title")}
             </h2>
-            <p className="mt-4 text-lg text-foreground-secondary">
+            <p className="mt-4 text-base text-foreground-secondary">
               {t("subtitle")}
             </p>
           </div>

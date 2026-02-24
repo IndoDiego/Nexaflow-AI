@@ -36,8 +36,11 @@ export default async function BlogPage({
     <Section>
       <Container className="max-w-4xl">
         <div className="mb-12 text-center">
+          <span className="mb-3 inline-block font-mono text-xs uppercase tracking-widest text-[var(--color-primary)]">
+            // blog
+          </span>
           <h1 className="text-3xl font-bold text-foreground sm:text-4xl">Blog</h1>
-          <p className="mt-4 text-lg text-foreground-secondary">
+          <p className="mt-4 text-base text-foreground-secondary">
             {locale === "es"
               ? "Insights sobre IA aplicada a negocios"
               : "Insights on AI applied to business"}
@@ -45,26 +48,30 @@ export default async function BlogPage({
         </div>
 
         {posts.length === 0 ? (
-          <p className="text-center text-foreground-muted">
-            {locale === "es" ? "Proximamente..." : "Coming soon..."}
+          <p className="text-center font-mono text-sm text-foreground-muted">
+            {locale === "es" ? "$ loading..." : "$ loading..."}
           </p>
         ) : (
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2">
             {posts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}` as any}>
                 <Card className="flex h-full flex-col">
-                  <Badge variant="primary" className="mb-3 self-start">
-                    {post.category}
-                  </Badge>
-                  <h2 className="mb-2 text-xl font-semibold text-foreground">
+                  <div className="mb-3 flex items-center gap-2">
+                    <Badge variant="primary">
+                      {post.category}
+                    </Badge>
+                    <span className="font-mono text-[10px] text-foreground-muted">
+                      {new Date(post.date).toLocaleDateString(locale, { year: "numeric", month: "short", day: "numeric" })}
+                    </span>
+                  </div>
+                  <h2 className="mb-2 font-mono text-sm font-semibold text-foreground group-hover:text-[var(--color-primary)]">
                     {post.title}
                   </h2>
-                  <p className="mb-4 flex-1 text-sm text-foreground-secondary">
+                  <p className="mb-4 flex-1 text-xs text-foreground-secondary leading-relaxed">
                     {post.description}
                   </p>
-                  <div className="flex items-center justify-between text-xs text-foreground-muted">
-                    <span>{post.author}</span>
-                    <time>{new Date(post.date).toLocaleDateString(locale, { year: "numeric", month: "long", day: "numeric" })}</time>
+                  <div className="flex items-center font-mono text-[10px] text-foreground-muted">
+                    <span className="text-[var(--color-accent)]">@</span>{post.author}
                   </div>
                 </Card>
               </Link>

@@ -44,27 +44,30 @@ export default async function AboutPage({
         <Container className="max-w-4xl">
           {/* Header */}
           <div className="mb-16 text-center">
+            <span className="mb-3 inline-block font-mono text-xs uppercase tracking-widest text-[var(--color-primary)]">
+              // about
+            </span>
             <h1 className="text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
               {t("title")}
             </h1>
-            <p className="mt-4 text-lg text-foreground-secondary">
+            <p className="mt-4 text-base text-foreground-secondary">
               {t("subtitle")}
             </p>
-            <p className="mx-auto mt-6 max-w-2xl text-foreground-secondary leading-relaxed">
+            <p className="mx-auto mt-6 max-w-2xl text-sm text-foreground-secondary leading-relaxed">
               {t("mission")}
             </p>
           </div>
 
           {/* Values */}
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2">
             {values.map((v) => (
               <Card key={v} hover={false} className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--color-primary)]/10 text-[var(--color-primary)]">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-[var(--color-primary)]/20 bg-[var(--color-primary)]/5 text-[var(--color-primary)]">
                   {valueIcons[v]}
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground">{t(`values.${v}.title`)}</h3>
-                  <p className="mt-1 text-sm text-foreground-secondary">
+                  <h3 className="font-mono text-sm font-semibold text-foreground">{t(`values.${v}.title`)}</h3>
+                  <p className="mt-1 text-xs text-foreground-secondary">
                     {t(`values.${v}.description`)}
                   </p>
                 </div>
