@@ -33,14 +33,14 @@ export default async function ServicesPage({
     <>
       <Section>
         <Container>
-          <div className="mb-12 text-center">
-            <span className="mb-3 inline-block font-mono text-xs uppercase tracking-widest text-[var(--color-primary)]">
-              {`>`} ls --services
+          <div className="mb-14 text-center">
+            <span className="mb-3 inline-block rounded-full bg-[var(--color-primary)]/10 px-4 py-1 text-sm font-semibold text-[var(--color-primary)]">
+              {t("badge") || "Services"}
             </span>
-            <h2 className="text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
+            <h1 className="text-3xl font-extrabold text-foreground sm:text-4xl lg:text-5xl">
               {t("title")}
-            </h2>
-            <p className="mt-4 text-base text-foreground-secondary">
+            </h1>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-foreground-secondary">
               {t("subtitle")}
             </p>
           </div>

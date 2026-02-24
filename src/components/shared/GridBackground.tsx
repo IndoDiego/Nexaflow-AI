@@ -2,15 +2,14 @@
 
 import { useEffect, useRef } from "react";
 
-const CHARS = "01アイウエオカキクケコサシスセソ";
-
-interface Particle {
+interface Orb {
   x: number;
   y: number;
-  speed: number;
-  char: string;
+  radius: number;
+  vx: number;
+  vy: number;
+  purple: boolean;
   opacity: number;
-  size: number;
 }
 
 export function GridBackground() {
@@ -19,12 +18,11 @@ export function GridBackground() {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
     let animationId: number;
-    let particles: Particle[] = [];
+    let orbs: Orb[] = [];
 
     function resize() {
       if (!canvas) return;
@@ -32,81 +30,58 @@ export function GridBackground() {
       canvas.height = window.innerHeight;
     }
 
-    function initParticles() {
+    function initOrbs() {
       if (!canvas) return;
-      const count = Math.floor((canvas.width * canvas.height) / 25000);
-      particles = Array.from({ length: Math.min(count, 60) }, () => ({
-        x: Math.random() * (canvas?.width ?? 0),
-        y: Math.random() * (canvas?.height ?? 0),
-        speed: 0.2 + Math.random() * 0.5,
-        char: CHARS[Math.floor(Math.random() * CHARS.length)],
-        opacity: 0.03 + Math.random() * 0.08,
-        size: 10 + Math.random() * 4,
-      }));
-    }
-
-    function drawGrid() {
-      if (!canvas || !ctx) return;
-      const gap = 40;
-      ctx.strokeStyle = "rgba(37, 99, 235, 0.04)";
-      ctx.lineWidth = 0.5;
-
-      for (let x = 0; x < canvas.width; x += gap) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-      }
-      for (let y = 0; y < canvas.height; y += gap) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
-        ctx.stroke();
-      }
+      orbs = [
+        { x: canvas.width * 0.2, y: canvas.height * 0.3, radius: 300, vx: 0.15, vy: 0.1, purple: true, opacity: 0.06 },
+        { x: canvas.width * 0.7, y: canvas.height * 0.6, radius: 250, vx: -0.12, vy: 0.08, purple: true, opacity: 0.04 },
+        { x: canvas.width * 0.8, y: canvas.height * 0.2, radius: 200, vx: -0.1, vy: -0.12, purple: false, opacity: 0.04 },
+        { x: canvas.width * 0.3, y: canvas.height * 0.8, radius: 180, vx: 0.08, vy: -0.1, purple: false, opacity: 0.03 },
+      ];
     }
 
     function animate() {
       if (!canvas || !ctx) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      drawGrid();
+      orbs.forEach((orb) => {
+        const gradient = ctx.createRadialGradient(orb.x, orb.y, 0, orb.x, orb.y, orb.radius);
+        const [r, g, b] = orb.purple ? [124, 58, 237] : [245, 158, 11];
+        gradient.addColorStop(0, `rgba(${r}, ${g}, ${b}, ${orb.opacity})`);
+        gradient.addColorStop(1, `rgba(${r}, ${g}, ${b}, 0)`);
 
-      // Draw floating characters
-      particles.forEach((p) => {
-        ctx.font = `${p.size}px "JetBrains Mono", monospace`;
-        ctx.fillStyle = `rgba(37, 99, 235, ${p.opacity})`;
-        ctx.fillText(p.char, p.x, p.y);
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(orb.x, orb.y, orb.radius, 0, Math.PI * 2);
+        ctx.fill();
 
-        p.y -= p.speed;
-        if (p.y < -20) {
-          p.y = canvas!.height + 20;
-          p.x = Math.random() * canvas!.width;
-          p.char = CHARS[Math.floor(Math.random() * CHARS.length)];
-        }
+        orb.x += orb.vx;
+        orb.y += orb.vy;
+        if (orb.x < -orb.radius) orb.x = canvas.width + orb.radius;
+        if (orb.x > canvas.width + orb.radius) orb.x = -orb.radius;
+        if (orb.y < -orb.radius) orb.y = canvas.height + orb.radius;
+        if (orb.y > canvas.height + orb.radius) orb.y = -orb.radius;
       });
 
       animationId = requestAnimationFrame(animate);
     }
 
     resize();
-    initParticles();
+    initOrbs();
     animate();
 
-    window.addEventListener("resize", () => {
-      resize();
-      initParticles();
-    });
-
+    const onResize = () => { resize(); initOrbs(); };
+    window.addEventListener("resize", onResize);
     return () => {
       cancelAnimationFrame(animationId);
-      window.removeEventListener("resize", resize);
+      window.removeEventListener("resize", onResize);
     };
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      className="pointer-events-none fixed inset-0 z-0 opacity-60"
+      className="pointer-events-none fixed inset-0 z-0"
       aria-hidden="true"
     />
   );

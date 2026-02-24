@@ -14,6 +14,7 @@
     "languageSwitch": "ES"
   },
   "Hero": {
+    "badge": "AI Automation Studio",
     "headline": "Supercharge your business",
     "headlineHighlight": "with Artificial Intelligence",
     "subheadline": "We automate processes, implement AI tools and 10x your results. Your AI technology team, one click away.",
@@ -27,6 +28,7 @@
     }
   },
   "Services": {
+    "badge": "What We Do",
     "title": "Our Services",
     "subtitle": "AI solutions designed for every area of your business",
     "searchPlaceholder": "Search services...",
@@ -86,6 +88,7 @@
     }
   },
   "Audit": {
+    "badge": "Free Assessment",
     "title": "Free AI Audit",
     "subtitle": "Discover how artificial intelligence can transform your business",
     "description": "In less than 48 hours you'll receive a personalized report with concrete improvement opportunities, ROI estimation and a prioritized action plan.",
@@ -159,6 +162,7 @@
     }
   },
   "HowItWorks": {
+    "badge": "Our Process",
     "title": "How We Work",
     "subtitle": "A simple process for extraordinary results",
     "steps": {
@@ -181,6 +185,7 @@
     }
   },
   "About": {
+    "badge": "About Us",
     "title": "About NexaFlow AI",
     "subtitle": "Your strategic partner in digital transformation with AI",
     "mission": "Our mission is to democratize access to artificial intelligence so any business can multiply its results.",
@@ -204,6 +209,7 @@
     }
   },
   "Contact": {
+    "badge": "Get in Touch",
     "title": "Let's Talk",
     "subtitle": "We're ready to supercharge your business",
     "form": {
@@ -225,7 +231,8 @@
   "CTA": {
     "title": "Ready to 10x your results?",
     "subtitle": "Start with a free audit and discover the potential of AI in your business.",
-    "button": "Get Started"
+    "button": "Get Started",
+    "contactButton": "Contact Us"
   },
   "Footer": {
     "description": "We transform businesses with artificial intelligence. Automation, chatbots, CRM and custom AI solutions.",

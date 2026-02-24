@@ -14,6 +14,7 @@
     "languageSwitch": "EN"
   },
   "Hero": {
+    "badge": "AI Automation Studio",
     "headline": "Potencia tu negocio",
     "headlineHighlight": "con Inteligencia Artificial",
     "subheadline": "Automatizamos procesos, implementamos herramientas de IA y multiplicamos tus resultados x10. Tu equipo de tecnologia AI a un click.",
@@ -27,6 +28,7 @@
     }
   },
   "Services": {
+    "badge": "Que Hacemos",
     "title": "Nuestros Servicios",
     "subtitle": "Soluciones de IA diseñadas para cada area de tu negocio",
     "searchPlaceholder": "Buscar servicios...",
@@ -86,6 +88,7 @@
     }
   },
   "Audit": {
+    "badge": "Evaluacion Gratuita",
     "title": "Auditoria IA Gratuita",
     "subtitle": "Descubre como la inteligencia artificial puede transformar tu negocio",
     "description": "En menos de 48 horas recibiras un informe personalizado con oportunidades concretas de mejora, estimacion de ROI y un plan de accion priorizado.",
@@ -159,6 +162,7 @@
     }
   },
   "HowItWorks": {
+    "badge": "Nuestro Proceso",
     "title": "Como Trabajamos",
     "subtitle": "Un proceso simple para resultados extraordinarios",
     "steps": {
@@ -181,6 +185,7 @@
     }
   },
   "About": {
+    "badge": "Sobre Nosotros",
     "title": "Sobre NexaFlow AI",
     "subtitle": "Tu socio estrategico en transformacion digital con IA",
     "mission": "Nuestra mision es democratizar el acceso a la inteligencia artificial para que cualquier negocio pueda multiplicar sus resultados.",
@@ -204,6 +209,7 @@
     }
   },
   "Contact": {
+    "badge": "Contacto",
     "title": "Hablemos",
     "subtitle": "Estamos listos para potenciar tu negocio",
     "form": {
@@ -225,7 +231,8 @@
   "CTA": {
     "title": "¿Listo para multiplicar tus resultados x10?",
     "subtitle": "Comienza con una auditoria gratuita y descubre el potencial de la IA en tu negocio.",
-    "button": "Comenzar Ahora"
+    "button": "Comenzar Ahora",
+    "contactButton": "Contactanos"
   },
   "Footer": {
     "description": "Transformamos negocios con inteligencia artificial. Automatizacion, chatbots, CRM y soluciones AI personalizadas.",

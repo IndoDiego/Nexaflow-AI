@@ -49,43 +49,43 @@ export default async function ServiceDetailPage({
     <>
       <Section>
         <Container className="max-w-4xl">
-          {/* Breadcrumb - terminal style */}
-          <div className="mb-8 flex items-center gap-1.5 font-mono text-xs text-foreground-muted">
-            <Link href="/" className="hover:text-[var(--color-primary)]">~</Link>
-            <span className="text-foreground-muted">/</span>
-            <Link href="/servicios" className="hover:text-[var(--color-primary)]">{t("title")}</Link>
-            <span className="text-foreground-muted">/</span>
-            <span className="text-[var(--color-primary)]">{t(`items.${service.id}.title`)}</span>
+          {/* Breadcrumb */}
+          <div className="mb-8 flex items-center gap-2 text-sm text-foreground-muted">
+            <Link href="/" className="hover:text-[var(--color-primary)] transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/servicios" className="hover:text-[var(--color-primary)] transition-colors">{t("title")}</Link>
+            <span>/</span>
+            <span className="text-foreground">{t(`items.${service.id}.title`)}</span>
           </div>
 
           {/* Header */}
-          <div className="flex items-start gap-4">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-[var(--color-primary)]/20 bg-[var(--color-primary)]/5 text-[var(--color-primary)]">
+          <div className="flex items-start gap-5">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-primary)]/8 text-[var(--color-primary)]">
               <ServiceIcon name={service.icon} />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
+              <h1 className="text-2xl font-extrabold text-foreground sm:text-3xl lg:text-4xl">
                 {t(`items.${service.id}.title`)}
               </h1>
-              <p className="mt-2 text-base text-foreground-secondary">
+              <p className="mt-2 text-lg text-foreground-secondary">
                 {t(`items.${service.id}.short`)}
               </p>
             </div>
           </div>
 
           {/* Description */}
-          <div className="mt-8">
-            <p className="text-sm leading-relaxed text-foreground-secondary">
+          <div className="mt-10">
+            <p className="text-base leading-relaxed text-foreground-secondary">
               {t(`items.${service.id}.description`)}
             </p>
           </div>
 
           {/* Tech Stack */}
-          <div className="mt-8 rounded-lg border border-border/40 bg-card/50 p-5 backdrop-blur-sm">
-            <h3 className="mb-3 font-mono text-[10px] font-semibold uppercase tracking-widest text-foreground-muted">
-              // tech_stack
+          <div className="mt-10 rounded-xl border border-border bg-card p-6">
+            <h3 className="mb-4 text-xs font-bold uppercase tracking-wider text-foreground-muted">
+              Tech Stack
             </h3>
-            <div className="flex flex-wrap gap-1.5">
+            <div className="flex flex-wrap gap-2">
               {service.techStack.map((tech) => (
                 <Badge key={tech} variant="primary">{tech}</Badge>
               ))}
@@ -93,7 +93,7 @@ export default async function ServiceDetailPage({
           </div>
 
           {/* CTA */}
-          <div className="mt-12 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-12 flex flex-col gap-4 sm:flex-row">
             <Link href="/auditoria-ia">
               <Button size="lg" variant="primary">
                 {tCommon("getStarted")}

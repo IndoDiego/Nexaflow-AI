@@ -35,12 +35,12 @@ export default async function BlogPage({
   return (
     <Section>
       <Container className="max-w-4xl">
-        <div className="mb-12 text-center">
-          <span className="mb-3 inline-block font-mono text-xs uppercase tracking-widest text-[var(--color-primary)]">
-            // blog
+        <div className="mb-14 text-center">
+          <span className="mb-3 inline-block rounded-full bg-[var(--color-primary)]/10 px-4 py-1 text-sm font-semibold text-[var(--color-primary)]">
+            Blog
           </span>
-          <h1 className="text-3xl font-bold text-foreground sm:text-4xl">Blog</h1>
-          <p className="mt-4 text-base text-foreground-secondary">
+          <h1 className="text-3xl font-extrabold text-foreground sm:text-4xl">Blog</h1>
+          <p className="mt-4 text-lg text-foreground-secondary">
             {locale === "es"
               ? "Insights sobre IA aplicada a negocios"
               : "Insights on AI applied to business"}
@@ -48,11 +48,11 @@ export default async function BlogPage({
         </div>
 
         {posts.length === 0 ? (
-          <p className="text-center font-mono text-sm text-foreground-muted">
-            {locale === "es" ? "$ loading..." : "$ loading..."}
+          <p className="text-center text-base text-foreground-muted">
+            {locale === "es" ? "Pronto publicaremos contenido..." : "Content coming soon..."}
           </p>
         ) : (
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2">
             {posts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}` as any}>
                 <Card className="flex h-full flex-col">
@@ -60,18 +60,18 @@ export default async function BlogPage({
                     <Badge variant="primary">
                       {post.category}
                     </Badge>
-                    <span className="font-mono text-[10px] text-foreground-muted">
+                    <span className="text-xs text-foreground-muted">
                       {new Date(post.date).toLocaleDateString(locale, { year: "numeric", month: "short", day: "numeric" })}
                     </span>
                   </div>
-                  <h2 className="mb-2 font-mono text-sm font-semibold text-foreground group-hover:text-[var(--color-primary)]">
+                  <h2 className="mb-2 text-base font-bold text-foreground group-hover:text-[var(--color-primary)]">
                     {post.title}
                   </h2>
-                  <p className="mb-4 flex-1 text-xs text-foreground-secondary leading-relaxed">
+                  <p className="mb-4 flex-1 text-sm text-foreground-secondary leading-relaxed">
                     {post.description}
                   </p>
-                  <div className="flex items-center font-mono text-[10px] text-foreground-muted">
-                    <span className="text-[var(--color-accent)]">@</span>{post.author}
+                  <div className="flex items-center text-xs text-foreground-muted">
+                    {post.author}
                   </div>
                 </Card>
               </Link>

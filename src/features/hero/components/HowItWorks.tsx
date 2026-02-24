@@ -7,10 +7,10 @@ import { Section } from "@/components/layout/Section";
 import { fadeInUp, staggerContainer } from "@/styles/animations";
 
 const steps = [
-  { key: "discovery", number: "01", color: "var(--color-primary)" },
-  { key: "audit", number: "02", color: "var(--color-accent)" },
-  { key: "implementation", number: "03", color: "var(--color-primary-light)" },
-  { key: "scale", number: "04", color: "var(--color-accent-dark)" },
+  { key: "discovery", number: "01" },
+  { key: "audit", number: "02" },
+  { key: "implementation", number: "03" },
+  { key: "scale", number: "04" },
 ] as const;
 
 export function HowItWorks() {
@@ -18,18 +18,17 @@ export function HowItWorks() {
 
   return (
     <Section className="relative bg-background-secondary">
-      {/* Subtle grid bg */}
-      <div className="pointer-events-none absolute inset-0 bg-grid-pattern opacity-20" />
+      <div className="pointer-events-none absolute inset-0 dot-grid opacity-30" />
 
       <Container className="relative">
-        <div className="mb-12 text-center">
-          <span className="mb-3 inline-block font-mono text-xs uppercase tracking-widest text-[var(--color-primary)]">
-            // {t("title")}
+        <div className="mb-14 text-center">
+          <span className="mb-3 inline-block rounded-full bg-[var(--color-primary)]/10 px-4 py-1 text-sm font-semibold text-[var(--color-primary)]">
+            {t("badge") || "Our Process"}
           </span>
-          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
             {t("title")}
           </h2>
-          <p className="mt-4 text-base text-foreground-secondary">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-foreground-secondary">
             {t("subtitle")}
           </p>
         </div>
@@ -49,25 +48,19 @@ export function HowItWorks() {
             >
               {/* Connector line */}
               {index < steps.length - 1 && (
-                <div className="absolute left-full top-6 hidden h-px w-6 bg-gradient-to-r from-[var(--color-primary)]/30 to-transparent lg:block" />
+                <div className="absolute left-full top-10 hidden h-px w-6 bg-gradient-to-r from-border to-transparent lg:block" />
               )}
 
-              <div className="rounded-lg border border-border/40 bg-card/50 p-5 backdrop-blur-sm">
+              <div className="rounded-xl border border-border bg-card p-6 card-lift hover:border-[var(--color-primary)]/30 hover:shadow-lg hover:shadow-[var(--color-primary)]/5">
                 {/* Step number */}
-                <div className="mb-3 flex items-center gap-3">
-                  <span
-                    className="inline-flex h-8 w-8 items-center justify-center rounded-md font-mono text-xs font-bold text-white"
-                    style={{ backgroundColor: step.color, boxShadow: `0 0 15px ${step.color}33` }}
-                  >
-                    {step.number}
-                  </span>
-                  <div className="h-px flex-1 bg-gradient-to-r from-border to-transparent" />
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)] text-sm font-bold text-white shadow-lg shadow-[var(--color-primary)]/20">
+                  {step.number}
                 </div>
 
-                <h3 className="mb-1.5 font-mono text-sm font-semibold text-foreground">
+                <h3 className="mb-2 text-base font-bold text-foreground">
                   {t(`steps.${step.key}.title`)}
                 </h3>
-                <p className="text-xs leading-relaxed text-foreground-secondary">
+                <p className="text-sm leading-relaxed text-foreground-secondary">
                   {t(`steps.${step.key}.description`)}
                 </p>
               </div>
